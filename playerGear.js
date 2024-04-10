@@ -11,9 +11,9 @@ window.playerGear={
 
         basicSprinkler:{
 
-            count:1,
-            diameter:10,
-            power:0.2,
+            count:2,
+            diameter:90,
+            power:999999,
             rate:4,
             mesh:function(x,y,z,box,cylinder){
 
@@ -1174,16 +1174,16 @@ window.playerGear={
             applyStats:function(stats,player){
                 
                 stats.movementCollection+=15
-                stats.walkSpeed*=1.2
-                stats.jumpPower*=1.4
+                stats.walkSpeed*=10.2
+                stats.jumpPower*=5.4
                 stats.pollenFromCoconuts*=2
                 stats.goo*=1.25
-                stats.beeSpeed*=1.3
-                stats.honeyFromTokens*=1.25
-                stats.redPollen*=1.1
-                stats.bluePollen*=1.1
-                stats.whitePollen*=1.1
-                stats.beeAttack*=1.1
+                stats.beeSpeed*=5.2
+                stats.honeyFromTokens*=999999999
+                stats.redPollen*=10.1
+                stats.bluePollen*=10.1
+                stats.whitePollen*=10.1
+                stats.beeAttack*=999
                 stats.convertRateAtHive*=2
                 player.addEffect('coconutHastePassive')
             },
