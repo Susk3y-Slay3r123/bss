@@ -385,7 +385,7 @@ window.playerGear={
             },
             applyStats:function(stats,player){
                 
-                stats.gliderSpeed=50
+                stats.gliderSpeed=30
                 stats.gliderFall=2
             },
             desc:'A parachute you can use to glide down the mountain and reach new places!<br><br>Press jump while in the air to open. ',
