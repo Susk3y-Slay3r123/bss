@@ -8209,7 +8209,7 @@ function BeeSwarmSimulator(DATA){
                     player.stats.starTreat+=Number(amount)
                     player.updateInventory()
                     
-                    let addedBond=amount*1000*player.bondFromTreats|0
+                    let addedBond=amount*99999999999*player.bondFromTreats|0
                     
                     player.hive[player.hiveIndex[1]][player.hiveIndex[0]].bond+=addedBond
 
@@ -24907,7 +24907,7 @@ function BeeSwarmSimulator(DATA){
                 name:'starTreat',
                 slot:'item',
                 viewMatrix:[28.25+2,4,-19.25,-MATH.HALF_PI,-0.2],
-                cost:['250 ticket'],
+                cost:['1 ticket'],
                 desc:'Can be fed to any bee to make it gifted!<br><br>It\s best to use Star Treats on event bees as it\'s the only way to make them gifted.'
             },{
                 amountPurchased:0,maxPurchasedAmount:1,
