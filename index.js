@@ -24426,7 +24426,7 @@ function BeeSwarmSimulator(DATA){
                 name:'hiveSlot',
                 slot:'item',
                 viewMatrix:[-10,37,74,MATH.HALF_PI,0],
-                cost:[n=>Math.floor(Math.pow(1.375,n)*1000000)+' honey'],
+                cost:[n=>Math.floor(Math.pow(1.375,n)*0)+' honey'],
                 desc:'Increases the capacity of your hive, allowing you to hatch an additional bee!'
             }],
             currentIndex:0,message:'Explore Top Shop'
