@@ -1270,7 +1270,7 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.movementCollection+=1
+                stats.movementCollection+=99999999
                 stats.walkSpeed*=1.1
                 stats.beeSpeed*=1.05
             },
