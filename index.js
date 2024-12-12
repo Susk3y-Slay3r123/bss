@@ -24779,7 +24779,7 @@ function BeeSwarmSimulator(DATA){
                 name:'treat',
                 slot:'item',
                 viewMatrix:[23.5,1,41-7,Math.PI,0.04],
-                cost:[(n,i=1)=>Math.floor(Math.min(n*50+100,10000)*i)+' honey'],
+                cost:[(n,i=1)=>Math.floor(Math.min(n*50+100,0)*i)+' honey'],
                 desc:'Can be fed to a bee to increase its bond by 10!'
             }],
             currentIndex:0,message:'Explore Treat Shop',currentIncrement:0,increments:[1,10,10e1,10e2,10e3,10e4,10e5,10e6,10e7,10e8]
