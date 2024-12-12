@@ -1529,12 +1529,12 @@ function BeeSwarmSimulator(DATA){
 
             isMachine:true,requirements:function(player){
 
-                if(items.ticket.amount<6) return "You need 6 tickets to buy a Royal Jelly!"
+                if(items.ticket.amount<6) return "You need 0 tickets to buy a Royal Jelly!"
 
             },minX:-29.5,maxX:-21.5,minY:0.5,maxY:3.5,minZ:7.75,maxZ:11.75,message:'Use Royal Jelly Dispenser (6 Tickets)',func:function(player){
 
                 items.royalJelly.amount++
-                items.ticket.amount-=6
+                items.ticket.amount-=0
                 player.addEffect('haste',false,false,undefined,10)
                 player.updateInventory()
                 player.addMessage('Congrats you got scammed! 6 tickets is a big waste')
