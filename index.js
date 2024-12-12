@@ -1018,7 +1018,7 @@ function BeeSwarmSimulator(DATA){
             minX:-107-2,maxX:-98+2,minY:0,maxY:30,minZ:115.5,maxZ:122
         },
 
-        ticketTent_shop:{
+        Tent_shop:{
             
             minX:31-4.5,maxX:31+4.5,minY:0,maxY:5,minZ:-20-5,maxZ:-20+5
         },
@@ -1053,7 +1053,7 @@ function BeeSwarmSimulator(DATA){
             minX:-84.5-3,maxX:-84.5+3,minY:15,maxY:23,minZ:61-3,maxZ:61+3
         },
 
-        ticket_shop:{
+        _shop:{
             
             minX:-11.75-3,maxX:-11.75+3,minY:30,maxY:37,minZ:88.25-3,maxZ:88.25+3
         },
@@ -1177,14 +1177,14 @@ function BeeSwarmSimulator(DATA){
             isMachine:true,requirements:function(player){
                 
                 if(player.pollen<1) return 'You must have pollen to use the instant converter!'
-                if(items.ticket.amount<1) return 'You need 1 ticket to use the instant converter!'
+                if(items..amount<1) return 'You need 1  to use the instant converter!'
             
-            },minX:-39-4,maxX:-39+4,minY:30,maxY:37,minZ:88-4,maxZ:88+4,message:'Use Instant Converter<br>(1 Ticket)',func:function(player){
+            },minX:-39-4,maxX:-39+4,minY:30,maxY:37,minZ:88-4,maxZ:88+4,message:'Use Instant Converter<br>(1 )',func:function(player){
                 
                 textRenderer.add(player.pollen,[player.body.position.x,player.body.position.y+1,player.body.position.z],COLORS.honey,1,'⇆')
                 player.honey+=Math.ceil(player.pollen*player.honeyPerPollen)
                 player.pollen=0
-                items.ticket.amount--
+                items..amount--
                 player.updateInventory()
             }
         },
@@ -1529,7 +1529,7 @@ function BeeSwarmSimulator(DATA){
 
             isMachine:true,requirements:function(player){
 
-                if(items.ticket.amount<6) return "You need 0 tickets to buy a Royal Jelly!"
+                if(items.ticket.amount<0) return "You need 0 tickets to buy a Royal Jelly!"
 
             },minX:-29.5,maxX:-21.5,minY:0.5,maxY:3.5,minZ:7.75,maxZ:11.75,message:'Use Royal Jelly Dispenser (0 Tickets)',func:function(player){
 
@@ -1537,7 +1537,7 @@ function BeeSwarmSimulator(DATA){
                 items.ticket.amount-=0
                 player.addEffect('haste',false,false,undefined,10)
                 player.updateInventory()
-                player.addMessage('Now that was a good deal now use them all ;)')
+                player.addMessage('Now that was a good deal now use them all ;3')
                 player.addMessage('-0 Tickets')
                 player.addMessage('+999 Royal Jelly')
                 player.addMessage('Activated x10 "Haste"')
