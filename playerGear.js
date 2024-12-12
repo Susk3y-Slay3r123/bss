@@ -501,14 +501,14 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.bluePollen*=1.2
-                stats.whitePollen*=1.2
-                stats.redPollen*=1.2
-                stats.jumpPower*=1.1
-                stats.redBeeAbilityRate*=1.05
-                stats.blueBeeAbilityRate*=1.05
-                stats.whiteBeeAbilityRate*=1.05
-                stats.defense+=0.1
+                stats.bluePollen*=5
+                stats.whitePollen*=5
+                stats.redPollen*=5
+                stats.jumpPower*=1.9
+                stats.redBeeAbilityRate*=5
+                stats.blueBeeAbilityRate*=5
+                stats.whiteBeeAbilityRate*=5
+                stats.defense+=100.9
 
             },
             desc:'A playful hat that keeps the sun out of your eyes.<br><br>x1.2 pollen<br>x1.05 bee ability rate<br>+10% defense<br>x1.1 jump power',
@@ -1292,11 +1292,11 @@ window.playerGear={
                 
                 stats.movementCollection+=5
                 stats.walkSpeed*=1.125
-                stats.jumpPower*=1.3
+                stats.jumpPower*=1.5
                 stats.beeSpeed*=1.1
             },
             desc:'A durable pair of boots helpful for traversing the mountain.<br><br>+5 movement collection<br>x1.1 bee speed<br>x1.125 movespeed<br>x1.3 jump power',
-            cost:['2000000 honey','20 pineapple','20 blueberry','20 strawberry'],
+            cost:['0 honey','0 pineapple','0 blueberry','0 strawberry'],
         },
     },
     
