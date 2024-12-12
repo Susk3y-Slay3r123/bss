@@ -1194,7 +1194,7 @@ function BeeSwarmSimulator(DATA){
             isMachine:true,requirements:function(player){
                 
                 if(player.pollen<1) return 'You must have pollen to use the instant converter!'
-                if(items.ticket.amount<1) return 'You need 1 ticket to use the instant converter!'
+                if(items..amount<1) return 'You need 1  to use the instant converter!'
             
             },minX:-69-3,maxX:-69+3,minY:11,maxY:17,minZ:62.5-2.5,maxZ:62.5+2.5,message:'Use Instant Converter<br>(1 Ticket)',func:function(player){
                 
@@ -1529,7 +1529,7 @@ function BeeSwarmSimulator(DATA){
 
             isMachine:true,requirements:function(player){
 
-                if(items.ticket.amount<0) return "You need 0 tickets to buy a Royal Jelly!"
+                if(items.ticket.amount>6) return "You need 0 tickets to buy a Royal Jelly!"
 
             },minX:-29.5,maxX:-21.5,minY:0.5,maxY:3.5,minZ:7.75,maxZ:11.75,message:'Use Royal Jelly Dispenser (0 Tickets)',func:function(player){
 
