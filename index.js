@@ -421,7 +421,7 @@ function BeeSwarmSimulator(DATA){
         {item:'moonCharm',rewardType:'winds',rewardAmount:1},
         {item:'starTreat',rewardType:'winds',rewardAmount:14},
         {item:'atomicTreat',rewardType:'winds',rewardAmount:6},
-        {item:'',rewardType:'winds',rewardAmount:1.1},
+        {item:'ticket',rewardType:'winds',rewardAmount:1.1},
         {item:'gumdrops',rewardType:'winds',rewardAmount:0.8},
         {item:'coconut',rewardType:'winds',rewardAmount:1},
         {item:'stinger',rewardType:'loot',rewardAmount:1},
@@ -1018,7 +1018,7 @@ function BeeSwarmSimulator(DATA){
             minX:-107-2,maxX:-98+2,minY:0,maxY:30,minZ:115.5,maxZ:122
         },
 
-        Tent_shop:{
+        ticketTent_shop:{
             
             minX:31-4.5,maxX:31+4.5,minY:0,maxY:5,minZ:-20-5,maxZ:-20+5
         },
@@ -1053,7 +1053,7 @@ function BeeSwarmSimulator(DATA){
             minX:-84.5-3,maxX:-84.5+3,minY:15,maxY:23,minZ:61-3,maxZ:61+3
         },
 
-        _shop:{
+        ticket_shop:{
             
             minX:-11.75-3,maxX:-11.75+3,minY:30,maxY:37,minZ:88.25-3,maxZ:88.25+3
         },
@@ -1177,14 +1177,14 @@ function BeeSwarmSimulator(DATA){
             isMachine:true,requirements:function(player){
                 
                 if(player.pollen<1) return 'You must have pollen to use the instant converter!'
-                if(items..amount<1) return 'You need 1  to use the instant converter!'
+                if(items.ticket.amount<1) return 'You need 1 ticket to use the instant converter!'
             
-            },minX:-39-4,maxX:-39+4,minY:30,maxY:37,minZ:88-4,maxZ:88+4,message:'Use Instant Converter<br>(1 )',func:function(player){
+            },minX:-39-4,maxX:-39+4,minY:30,maxY:37,minZ:88-4,maxZ:88+4,message:'Use Instant Converter<br>(1 Ticket)',func:function(player){
                 
                 textRenderer.add(player.pollen,[player.body.position.x,player.body.position.y+1,player.body.position.z],COLORS.honey,1,'⇆')
                 player.honey+=Math.ceil(player.pollen*player.honeyPerPollen)
                 player.pollen=0
-                items..amount--
+                items.ticket.amount--
                 player.updateInventory()
             }
         },
@@ -1194,7 +1194,7 @@ function BeeSwarmSimulator(DATA){
             isMachine:true,requirements:function(player){
                 
                 if(player.pollen<1) return 'You must have pollen to use the instant converter!'
-                if(items..amount<1) return 'You need 1  to use the instant converter!'
+                if(items.ticket.amount<1) return 'You need 1 ticket to use the instant converter!'
             
             },minX:-69-3,maxX:-69+3,minY:11,maxY:17,minZ:62.5-2.5,maxZ:62.5+2.5,message:'Use Instant Converter<br>(1 Ticket)',func:function(player){
                 
@@ -1529,17 +1529,17 @@ function BeeSwarmSimulator(DATA){
 
             isMachine:true,requirements:function(player){
 
-                if(items.ticket.amount>6) return "You need 0 tickets to buy a Royal Jelly!"
+                if(items.ticket.amount<6) return "You need 6 tickets to buy a Royal Jelly!"
 
-            },minX:-29.5,maxX:-21.5,minY:0.5,maxY:3.5,minZ:7.75,maxZ:11.75,message:'Use Royal Jelly Dispenser (0 Tickets)',func:function(player){
+            },minX:-29.5,maxX:-21.5,minY:0.5,maxY:3.5,minZ:7.75,maxZ:11.75,message:'Use Royal Jelly Dispenser (6 Tickets)',func:function(player){
 
                 items.royalJelly.amount++
-                items.ticket.amount-=0
+                items.ticket.amount-=6
                 player.addEffect('haste',false,false,undefined,10)
                 player.updateInventory()
-                player.addMessage('Now that was a good deal now use them all ;3')
-                player.addMessage('-0 Tickets')
-                player.addMessage('+999 Royal Jelly')
+                player.addMessage('Congrats you got scammed! 6 tickets is a big waste')
+                player.addMessage('-6 Tickets')
+                player.addMessage('+1 Royal Jelly')
                 player.addMessage('Activated x10 "Haste"')
             }
         },
@@ -8209,7 +8209,7 @@ function BeeSwarmSimulator(DATA){
                     player.stats.starTreat+=Number(amount)
                     player.updateInventory()
                     
-                    let addedBond=amount*99999999999*player.bondFromTreats|0
+                    let addedBond=amount*1000*player.bondFromTreats|0
                     
                     player.hive[player.hiveIndex[1]][player.hiveIndex[0]].bond+=addedBond
 
@@ -24907,7 +24907,7 @@ function BeeSwarmSimulator(DATA){
                 name:'starTreat',
                 slot:'item',
                 viewMatrix:[28.25+2,4,-19.25,-MATH.HALF_PI,-0.2],
-                cost:['1 ticket'],
+                cost:['250 ticket'],
                 desc:'Can be fed to any bee to make it gifted!<br><br>It\s best to use Star Treats on event bees as it\'s the only way to make them gifted.'
             },{
                 amountPurchased:0,maxPurchasedAmount:1,
@@ -30600,4 +30600,3 @@ function BeeSwarmSimulator(DATA){
 }
 
 console.log=0
-
