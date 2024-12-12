@@ -24846,7 +24846,7 @@ function BeeSwarmSimulator(DATA){
                 name:'ticket',
                 slot:'item',
                 viewMatrix:[-11.75-4.5,35,88.25-4.5,MATH.HALF_PI+MATH.QUATER_PI,0.02],
-                cost:[(n,i=1)=>Math.min(Math.floor(5000*Math.pow(1.003,n)*i),1000000000000)+' honey'],
+                cost:[(n,i=1)=>Math.min(Math.floor(5000*Math.pow(1.003,n)*i),0)+' honey'],
                 desc:'Can be used to purchase special items and activate machines!'
             }],
             currentIndex:0,message:'Explore Ticket Shop',currentIncrement:0,increments:[1,10,10e1,50e1]
