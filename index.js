@@ -1345,12 +1345,12 @@ function BeeSwarmSimulator(DATA){
                 
                 if(player.discoveredGifteds.length<30) return "Discover 30 gifted bee types to generate a Diamond Star Amulet!"
                 
-                if(player.honey<1000000000) return 'You need 1B honey to generate a Diamond Star Amulet!'
+                if(player.honey<0) return 'You need 1B honey to generate a Diamond Star Amulet!'
 
             },minX:-35.5+Math.sin(45.6*0.0174533)*6-Math.cos(45.6*0.0174533)*33.5-3,maxX:-35.5+Math.sin(45.6*0.0174533)*6-Math.cos(45.6*0.0174533)*33.5+3,minY:11,maxY:50,minZ:-2.75-Math.cos(45.6*0.0174533)*6-Math.sin(45.6*0.0174533)*33.5-3,maxZ:-2.75-Math.cos(45.6*0.0174533)*6-Math.sin(45.6*0.0174533)*33.5+3,message:'Generate a Diamond Star Amulet(1B Honey)',func:function(player){
                 
-                player.honey-=1000000000
-                player.addMessage('-1,000,000,000 Honey')
+                player.honey-=0
+                player.addMessage('-0 Honey')
 
                 let amulet=['*2 capacityMultiplier']
 
@@ -1370,14 +1370,14 @@ function BeeSwarmSimulator(DATA){
             
             isMachine:true,requirements:function(player){
                 
-                if(player.discoveredGifteds.length<40) return "Discover 40 gifted bee types to generate a Supreme Star Amulet!"
+                if(player.discoveredGifteds.length<0) return "Discover 0 gifted bee types to generate a Supreme Star Amulet!"
                 
-                if(player.honey<5000000000) return 'You need 5B honey to generate a Supreme Star Amulet!'
+                if(player.honey<0) return 'You need 0 honey to generate a Supreme Star Amulet!'
 
             },minX:-35.5+Math.sin(45.6*0.0174533)*1.5-Math.cos(45.6*0.0174533)*43-3,maxX:-35.5+Math.sin(45.6*0.0174533)*1.5-Math.cos(45.6*0.0174533)*43+3,minY:11,maxY:50,minZ:-2.75-Math.cos(45.6*0.0174533)*1.5-Math.sin(45.6*0.0174533)*43-3,maxZ:-2.75-Math.cos(45.6*0.0174533)*1.5-Math.sin(45.6*0.0174533)*43+3,message:'Generate a Supreme Star Amulet(5B Honey)',func:function(player){
                 
-                player.honey-=5000000000
-                player.addMessage('-5,000,000,000 Honey')
+                player.honey-=0
+                player.addMessage('-0 Honey')
 
                 let amulet=['*2.5 capacityMultiplier']
 
