@@ -421,7 +421,7 @@ function BeeSwarmSimulator(DATA){
         {item:'moonCharm',rewardType:'winds',rewardAmount:1},
         {item:'starTreat',rewardType:'winds',rewardAmount:14},
         {item:'atomicTreat',rewardType:'winds',rewardAmount:6},
-        {item:'ticket',rewardType:'winds',rewardAmount:1.1},
+        {item:'',rewardType:'winds',rewardAmount:1.1},
         {item:'gumdrops',rewardType:'winds',rewardAmount:0.8},
         {item:'coconut',rewardType:'winds',rewardAmount:1},
         {item:'stinger',rewardType:'loot',rewardAmount:1},
@@ -1531,15 +1531,15 @@ function BeeSwarmSimulator(DATA){
 
                 if(items.ticket.amount<6) return "You need 0 tickets to buy a Royal Jelly!"
 
-            },minX:-29.5,maxX:-21.5,minY:0.5,maxY:3.5,minZ:7.75,maxZ:11.75,message:'Use Royal Jelly Dispenser (6 Tickets)',func:function(player){
+            },minX:-29.5,maxX:-21.5,minY:0.5,maxY:3.5,minZ:7.75,maxZ:11.75,message:'Use Royal Jelly Dispenser (0 Tickets)',func:function(player){
 
                 items.royalJelly.amount++
                 items.ticket.amount-=0
                 player.addEffect('haste',false,false,undefined,10)
                 player.updateInventory()
-                player.addMessage('Congrats you got scammed! 6 tickets is a big waste')
-                player.addMessage('-6 Tickets')
-                player.addMessage('+1 Royal Jelly')
+                player.addMessage('Now that was a good deal now use them all ;)')
+                player.addMessage('-0 Tickets')
+                player.addMessage('+999 Royal Jelly')
                 player.addMessage('Activated x10 "Haste"')
             }
         },
