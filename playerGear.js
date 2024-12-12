@@ -11,9 +11,9 @@ window.playerGear={
 
         basicSprinkler:{
 
-            count:2,
-            diameter:90,
-            power:999999,
+            count:1,
+            diameter:10,
+            power:0.2,
             rate:4,
             mesh:function(x,y,z,box,cylinder){
 
@@ -385,8 +385,8 @@ window.playerGear={
             },
             applyStats:function(stats,player){
                 
-                stats.gliderSpeed=30
-                stats.gliderFall=2
+                stats.gliderSpeed=18*0.7
+                stats.gliderFall=-5*0.75
             },
             desc:'A parachute you can use to glide down the mountain and reach new places!<br><br>Press jump while in the air to open. ',
             cost:['500000 honey'],
@@ -656,20 +656,20 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacityMultiplier*=100
+                stats.capacityMultiplier*=2
                 stats.whiteFieldCapacity*=1.75
                 stats.goo*=1.75
                 stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.25)
-                stats.redBeeAbilityRate*=50
-                stats.blueBeeAbilityRate*=50
-                stats.whiteBeeAbilityRate*=50
+                stats.redBeeAbilityRate*=1.2
+                stats.blueBeeAbilityRate*=1.2
+                stats.whiteBeeAbilityRate*=1.2
                 stats.bluePollen*=1.35
                 stats.whitePollen*=1.35
                 stats.redPollen*=1.35
                 stats.whitePollen*=1.5
                 stats.honeyFromTokens*=1.5
                 stats.convertRate*=1.75
-                stats.defense+=100
+                stats.defense+=0.3
                 player.addEffect('gummyMorphPassive')
                 player.addEffect('coinScatterPassive')
 
@@ -697,24 +697,24 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacityMultiplier*=50
-                stats.blueFieldCapacity*=100
-                stats.bluePollen*=100
-                stats.bluePollen*=100
-                stats.whitePollen*=100
-                stats.redPollen*=100
-                stats.convertRate*=22
-                stats.convertRateAtHive*5
-                stats.bubblePollen*=22
-                stats.redBeeAbilityRate*=50
-                stats.blueBeeAbilityRate*=50
-                stats.whiteBeeAbilityRate*=50
-                stats.defense+=9999999999
+                stats.capacityMultiplier*=3
+                stats.blueFieldCapacity*=1.75
+                stats.bluePollen*=1.5
+                stats.bluePollen*=1.35
+                stats.whitePollen*=1.35
+                stats.redPollen*=1.35
+                stats.convertRate*=2
+                stats.convertRateAtHive*=2
+                stats.bubblePollen*=2
+                stats.redBeeAbilityRate*=1.2
+                stats.blueBeeAbilityRate*=1.2
+                stats.whiteBeeAbilityRate*=1.2
+                stats.defense+=0.35
                 player.addEffect('diamondDrainPassive')
                 player.addEffect('bubbleBombsPassive')
             },
             desc:'Proudly show off your extreme wealth to the world. Shine so brightly that others will complain.<br><br>x3 capacity<br>x1.75 blue field capacity<br>x1.5 blue pollen<br>x1.35 pollen<br>x2 convert rate<br>x2 convert rate at hive<br>x2 bubble pollen<br>+35% defense<br>x1.2 bee ability rate<br>+Passive: Diamond Drain<br>+Passive: Bubble Bombs',
-            cost:['50 honey','1 blueExtract','1 glitter','1 oil'],
+            cost:['5000000000 honey','250 blueExtract','1 diamondEgg','75 glitter','100 oil'],
         },
         
         demonMask:{
@@ -1025,11 +1025,11 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=9999999999
-                stats.convertRate*=22
-                stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,22)
-                stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,22)
-                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,22)
+                stats.capacity+=250000
+                stats.convertRate*=2
+                stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,0.05)
+                stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,0.05)
+                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.05)
             },
             desc:'A miniature hive you can wear on your back! Instantly converts some pollen to honey.<br>+250,000 capacity<br>x2 convert rate<br>+5% instant conversion',
             cost:['1250000 honey'],
@@ -1101,20 +1101,20 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=99999999999999
-                stats.convertRate*=22
-                stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,22)
-                stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,22)
-                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,22)
-                stats.whitePollen*=50
-                stats.bluePollen*=50
-                stats.redPollen*=50
-                stats.redBeeAttack+=999
-                stats.blueBeeAttack+=999
-                stats.whiteBeeAttack+=999
+                stats.capacity+=1000000
+                stats.convertRate*=3
+                stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,0.1)
+                stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,0.1)
+                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.1)
+                stats.whitePollen*=1.5
+                stats.bluePollen*=1.1
+                stats.redPollen*=1.1
+                stats.redBeeAttack+=1
+                stats.blueBeeAttack+=1
+                stats.whiteBeeAttack+=1
             },
             desc:'A rare and precious Port-O-Hive that boosts white pollen.<br>+1,000,000 capacity<br>x3 convert rate<br>+10% instant conversion<br>x1.5 white pollen<br>x1.1 red pollen<br>x1.1 blue pollen<br>+1 bee attack',
-            cost:['1 honey'],
+            cost:['150000000 honey'],
         },
         
         coconutCanister:{
@@ -1174,16 +1174,16 @@ window.playerGear={
             applyStats:function(stats,player){
                 
                 stats.movementCollection+=15
-                stats.walkSpeed*=10.2
-                stats.jumpPower*=5.4
+                stats.walkSpeed*=1.2
+                stats.jumpPower*=1.4
                 stats.pollenFromCoconuts*=2
                 stats.goo*=1.25
-                stats.beeSpeed*=5.2
-                stats.honeyFromTokens*=999999999
-                stats.redPollen*=10.1
-                stats.bluePollen*=10.1
-                stats.whitePollen*=10.1
-                stats.beeAttack*=999
+                stats.beeSpeed*=1.3
+                stats.honeyFromTokens*=1.25
+                stats.redPollen*=1.1
+                stats.bluePollen*=1.1
+                stats.whitePollen*=1.1
+                stats.beeAttack*=1.1
                 stats.convertRateAtHive*=2
                 player.addEffect('coconutHastePassive')
             },
