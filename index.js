@@ -1282,12 +1282,12 @@ function BeeSwarmSimulator(DATA){
 
                 if(player.discoveredGifteds.length<5) return "Discover 5 gifted bee types to generate a Bronze Star Amulet!"
                 
-                if(player.honey<25000000) return 'You need 25M honey to generate a Bronze Star Amulet!'
+                if(player.honey<0) return 'You need 0 honey to generate a Bronze Star Amulet!'
 
             },minX:-35.5-Math.sin(45.6*0.0174533)*3-Math.cos(45.6*0.0174533)*12.5-3,maxX:-35.5-Math.sin(45.6*0.0174533)*3-Math.cos(45.6*0.0174533)*12.5+3,minY:11,maxY:50,minZ:-2.75+Math.cos(45.6*0.0174533)*3-Math.sin(45.6*0.0174533)*12.5-3,maxZ:-2.75+Math.cos(45.6*0.0174533)*3-Math.sin(45.6*0.0174533)*12.5+3,message:'Generate a Bronze Star Amulet(25M Honey)',func:function(player){
                 
-                player.honey-=25000000
-                player.addMessage('-25,000,000 Honey')
+                player.honey-=0
+                player.addMessage('-0 Honey')
 
                 let amulet=['*1.25 capacityMultiplier']
 
