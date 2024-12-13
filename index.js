@@ -18220,7 +18220,7 @@ function BeeSwarmSimulator(DATA){
                     )
                 }
                 
-                addHiveSlot=function(x,y,z,w,h,type,gifted){
+                add=function(x,y,z,w,h,type,gifted){
                     
                     let t=128/2048,_x=beeInfo[type||'basic'].u,_y=beeInfo[type||'basic'].v+(gifted?768/2048:0),isNull=type===null?1:0,[r,g,b]=COLORS.honey_normalized
                     
@@ -18961,7 +18961,7 @@ function BeeSwarmSimulator(DATA){
                 }
             }
             
-            func(addBox,addHiveSlot,addCylinder,addSphere,applyFinalRotation,addGiftedRing,addStar,addLimbBox,addLimbCylinder)
+            func(addBox,add,addCylinder,addSphere,applyFinalRotation,addGiftedRing,addStar,addLimbBox,addLimbCylinder)
             this.setMesh(verts,index)
         }
         
@@ -21518,7 +21518,7 @@ function BeeSwarmSimulator(DATA){
 
                     shops[out.currentShop].items[shops[out.currentShop].currentIndex].amountPurchased+=incre
                     
-                    if(shops[out.currentShop].items[shops[out.currentShop].currentIndex].name==='hiveSlot'){
+                    if(shops[out.currentShop].items[shops[out.currentShop].currentIndex].name===''){
 
                         out.addSlot(null)
                         out.updateHive()
@@ -22399,7 +22399,7 @@ function BeeSwarmSimulator(DATA){
         
         out.updateHive=function(){
             
-            out.hiveMesh.setMeshFromFunction(function(box,hiveSlot,useless1,useless2,useless3,giftedRing){
+            out.hiveMesh.setMeshFromFunction(function(box,,useless1,useless2,useless3,giftedRing){
                 
                 for(let i in objects.bees){
                     
@@ -22435,7 +22435,7 @@ function BeeSwarmSimulator(DATA){
                         
                         out.hive[y][x].level=l
                         
-                        hiveSlot(out.hivePos[0]+x*0.8,out.hivePos[1]+y*0.8-2.25,out.hivePos[2],0.35,0.35,out.hive[y][x].type,out.hive[y][x].gifted)
+                        (out.hivePos[0]+x*0.8,out.hivePos[1]+y*0.8-2.25,out.hivePos[2],0.35,0.35,out.hive[y][x].type,out.hive[y][x].gifted)
                         
                         if(out.hive[y][x].type!==null){
                             
@@ -24422,7 +24422,7 @@ function BeeSwarmSimulator(DATA){
                 displayPos:[-16.75,35.35+4.25,77.5-7.5],
                 displayScale:[1.25,1.25,1.25],
             },{
-                amountPurchased:0,maxPurchasedAmount:25,
+                amountPurchased:0,maxPurchasedAmount:Infinity,
                 name:'hiveSlot',
                 slot:'item',
                 viewMatrix:[-10,37,74,MATH.HALF_PI,0],
