@@ -8713,7 +8713,7 @@ function BeeSwarmSimulator(DATA){
             amount:0,u:128*7/2048,v:128*5/2048,value:200,
             use:function(){
                 
-                let types={mythic:0.05,legendary:0.95},r=Math.random(),type,c=0
+                let types={mythic:50,legendary:50},r=Math.random(),type,c=0
                 
                 for(let i in types){
                     
@@ -8889,7 +8889,7 @@ function BeeSwarmSimulator(DATA){
             amount:0,u:128*7/2048,v:128*8/2048,value:300,
             use:function(){
                 
-                let types={mythic:0.05,legendary:0.95},r=Math.random(),type,c=0
+                let types={mythic:50,legendary:50},r=Math.random(),type,c=0
                 
                 for(let i in types){
                     
