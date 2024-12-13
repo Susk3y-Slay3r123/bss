@@ -403,7 +403,7 @@ function BeeSwarmSimulator(DATA){
         {item:'swirledWax',req:[['hardWax',1],['softWax',2],['purplePotion',1],['royalJelly',15]]},
         {item:'causticWax',req:[['hardWax',2],['neonberry',5],['gumdrops',10],['royalJelly',25]]},
         {item:'turpentine',req:[['superSmoothie',3],['causticWax',3],['starJelly',5],['honeysuckle',50]]},
-        {item:'diamondEgg',req:[['goldEgg',1],['swirledWax',1],['royalJelly',100]]},
+        {item:'diamondEgg',req:[['goldEgg',0],['swirledWax',0],['royalJelly',0]]},
 
     ],windShrineDonations=[
 
@@ -24422,11 +24422,11 @@ function BeeSwarmSimulator(DATA){
                 displayPos:[-16.75,35.35+4.25,77.5-7.5],
                 displayScale:[1.25,1.25,1.25],
             },{
-                amountPurchased:0,maxPurchasedAmount:25,
+                amountPurchased:0,maxPurchasedAmount:Infinity,
                 name:'hiveSlot',
                 slot:'item',
                 viewMatrix:[-10,37,74,MATH.HALF_PI,0],
-                cost:[n=>Math.floor(Math.pow(1.375,n)*1000000)+' honey'],
+                cost:[n=>Math.floor(Math.pow(1.375,n)*0)+' honey'],
                 desc:'Increases the capacity of your hive, allowing you to hatch an additional bee!'
             }],
             currentIndex:0,message:'Explore Top Shop'
@@ -24793,7 +24793,7 @@ function BeeSwarmSimulator(DATA){
                 name:'royalJelly',
                 slot:'item',
                 viewMatrix:[32+4.5,12,50.25-4.5,-MATH.HALF_PI-MATH.QUATER_PI,0.02],
-                cost:[(n,i=1)=>Math.floor(Math.min(n*2500+25000,1000000)*i)+' honey'],
+                cost:[(n,i=1)=>Math.floor(Math.min(n*2500+25000,0)*i)+' honey'],
                 desc:'Can be fed to a bee to transform it into a different type!'
             }],
             currentIndex:0,message:'Explore Royal Jelly Shop',currentIncrement:0,increments:[1,10,10e1,10e2,10e3,10e4]
@@ -24846,7 +24846,7 @@ function BeeSwarmSimulator(DATA){
                 name:'ticket',
                 slot:'item',
                 viewMatrix:[-11.75-4.5,35,88.25-4.5,MATH.HALF_PI+MATH.QUATER_PI,0.02],
-                cost:[(n,i=1)=>Math.min(Math.floor(5000*Math.pow(1.003,n)*i),1000000000000)+' honey'],
+                cost:[(n,i=1)=>Math.min(Math.floor(5000*Math.pow(1.003,n)*i),0)+' honey'],
                 desc:'Can be used to purchase special items and activate machines!'
             }],
             currentIndex:0,message:'Explore Ticket Shop',currentIncrement:0,increments:[1,10,10e1,50e1]
