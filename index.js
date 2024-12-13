@@ -1282,12 +1282,12 @@ function BeeSwarmSimulator(DATA){
 
                 if(player.discoveredGifteds.length<5) return "Discover 5 gifted bee types to generate a Bronze Star Amulet!"
                 
-                if(player.honey<0) return 'You need 0 honey to generate a Bronze Star Amulet!'
+                if(player.honey<25000000) return 'You need 25M honey to generate a Bronze Star Amulet!'
 
             },minX:-35.5-Math.sin(45.6*0.0174533)*3-Math.cos(45.6*0.0174533)*12.5-3,maxX:-35.5-Math.sin(45.6*0.0174533)*3-Math.cos(45.6*0.0174533)*12.5+3,minY:11,maxY:50,minZ:-2.75+Math.cos(45.6*0.0174533)*3-Math.sin(45.6*0.0174533)*12.5-3,maxZ:-2.75+Math.cos(45.6*0.0174533)*3-Math.sin(45.6*0.0174533)*12.5+3,message:'Generate a Bronze Star Amulet(25M Honey)',func:function(player){
                 
-                player.honey-=0
-                player.addMessage('-0 Honey')
+                player.honey-=25000000
+                player.addMessage('-25,000,000 Honey')
 
                 let amulet=['*1.25 capacityMultiplier']
 
@@ -1345,12 +1345,12 @@ function BeeSwarmSimulator(DATA){
                 
                 if(player.discoveredGifteds.length<30) return "Discover 30 gifted bee types to generate a Diamond Star Amulet!"
                 
-                if(player.honey<0) return 'You need 1B honey to generate a Diamond Star Amulet!'
+                if(player.honey<1000000000) return 'You need 1B honey to generate a Diamond Star Amulet!'
 
             },minX:-35.5+Math.sin(45.6*0.0174533)*6-Math.cos(45.6*0.0174533)*33.5-3,maxX:-35.5+Math.sin(45.6*0.0174533)*6-Math.cos(45.6*0.0174533)*33.5+3,minY:11,maxY:50,minZ:-2.75-Math.cos(45.6*0.0174533)*6-Math.sin(45.6*0.0174533)*33.5-3,maxZ:-2.75-Math.cos(45.6*0.0174533)*6-Math.sin(45.6*0.0174533)*33.5+3,message:'Generate a Diamond Star Amulet(1B Honey)',func:function(player){
                 
-                player.honey-=0
-                player.addMessage('-0 Honey')
+                player.honey-=1000000000
+                player.addMessage('-1,000,000,000 Honey')
 
                 let amulet=['*2 capacityMultiplier']
 
@@ -1370,14 +1370,14 @@ function BeeSwarmSimulator(DATA){
             
             isMachine:true,requirements:function(player){
                 
-                if(player.discoveredGifteds.length<0) return "Discover 0 gifted bee types to generate a Supreme Star Amulet!"
+                if(player.discoveredGifteds.length<40) return "Discover 40 gifted bee types to generate a Supreme Star Amulet!"
                 
-                if(player.honey<0) return 'You need 0 honey to generate a Supreme Star Amulet!'
+                if(player.honey<5000000000) return 'You need 5B honey to generate a Supreme Star Amulet!'
 
             },minX:-35.5+Math.sin(45.6*0.0174533)*1.5-Math.cos(45.6*0.0174533)*43-3,maxX:-35.5+Math.sin(45.6*0.0174533)*1.5-Math.cos(45.6*0.0174533)*43+3,minY:11,maxY:50,minZ:-2.75-Math.cos(45.6*0.0174533)*1.5-Math.sin(45.6*0.0174533)*43-3,maxZ:-2.75-Math.cos(45.6*0.0174533)*1.5-Math.sin(45.6*0.0174533)*43+3,message:'Generate a Supreme Star Amulet(5B Honey)',func:function(player){
                 
-                player.honey-=0
-                player.addMessage('-0 Honey')
+                player.honey-=5000000000
+                player.addMessage('-5,000,000,000 Honey')
 
                 let amulet=['*2.5 capacityMultiplier']
 
@@ -18220,7 +18220,7 @@ function BeeSwarmSimulator(DATA){
                     )
                 }
                 
-                add=function(x,y,z,w,h,type,gifted){
+                addHiveSlot=function(x,y,z,w,h,type,gifted){
                     
                     let t=128/2048,_x=beeInfo[type||'basic'].u,_y=beeInfo[type||'basic'].v+(gifted?768/2048:0),isNull=type===null?1:0,[r,g,b]=COLORS.honey_normalized
                     
@@ -18961,7 +18961,7 @@ function BeeSwarmSimulator(DATA){
                 }
             }
             
-            func(addBox,add,addCylinder,addSphere,applyFinalRotation,addGiftedRing,addStar,addLimbBox,addLimbCylinder)
+            func(addBox,addHiveSlot,addCylinder,addSphere,applyFinalRotation,addGiftedRing,addStar,addLimbBox,addLimbCylinder)
             this.setMesh(verts,index)
         }
         
@@ -21518,7 +21518,7 @@ function BeeSwarmSimulator(DATA){
 
                     shops[out.currentShop].items[shops[out.currentShop].currentIndex].amountPurchased+=incre
                     
-                    if(shops[out.currentShop].items[shops[out.currentShop].currentIndex].name===''){
+                    if(shops[out.currentShop].items[shops[out.currentShop].currentIndex].name==='hiveSlot'){
 
                         out.addSlot(null)
                         out.updateHive()
@@ -22399,7 +22399,7 @@ function BeeSwarmSimulator(DATA){
         
         out.updateHive=function(){
             
-            out.hiveMesh.setMeshFromFunction(function(box,,useless1,useless2,useless3,giftedRing){
+            out.hiveMesh.setMeshFromFunction(function(box,hiveSlot,useless1,useless2,useless3,giftedRing){
                 
                 for(let i in objects.bees){
                     
@@ -22435,7 +22435,7 @@ function BeeSwarmSimulator(DATA){
                         
                         out.hive[y][x].level=l
                         
-                        (out.hivePos[0]+x*0.8,out.hivePos[1]+y*0.8-2.25,out.hivePos[2],0.35,0.35,out.hive[y][x].type,out.hive[y][x].gifted)
+                        hiveSlot(out.hivePos[0]+x*0.8,out.hivePos[1]+y*0.8-2.25,out.hivePos[2],0.35,0.35,out.hive[y][x].type,out.hive[y][x].gifted)
                         
                         if(out.hive[y][x].type!==null){
                             
@@ -24426,7 +24426,7 @@ function BeeSwarmSimulator(DATA){
                 name:'hiveSlot',
                 slot:'item',
                 viewMatrix:[-10,37,74,MATH.HALF_PI,0],
-                cost:[n=>Math.floor(Math.pow(1.375,n)*0)+' honey'],
+                cost:[n=>Math.floor(Math.pow(1.375,n)*1000000)+' honey'],
                 desc:'Increases the capacity of your hive, allowing you to hatch an additional bee!'
             }],
             currentIndex:0,message:'Explore Top Shop'
@@ -24779,7 +24779,7 @@ function BeeSwarmSimulator(DATA){
                 name:'treat',
                 slot:'item',
                 viewMatrix:[23.5,1,41-7,Math.PI,0.04],
-                cost:[(n,i=1)=>Math.floor(Math.min(n*50+100,0)*i)+' honey'],
+                cost:[(n,i=1)=>Math.floor(Math.min(n*50+100,10000)*i)+' honey'],
                 desc:'Can be fed to a bee to increase its bond by 10!'
             }],
             currentIndex:0,message:'Explore Treat Shop',currentIncrement:0,increments:[1,10,10e1,10e2,10e3,10e4,10e5,10e6,10e7,10e8]
@@ -24793,7 +24793,7 @@ function BeeSwarmSimulator(DATA){
                 name:'royalJelly',
                 slot:'item',
                 viewMatrix:[32+4.5,12,50.25-4.5,-MATH.HALF_PI-MATH.QUATER_PI,0.02],
-                cost:[(n,i=1)=>Math.floor(Math.min(n*2500+25000,0)*i)+' honey'],
+                cost:[(n,i=1)=>Math.floor(Math.min(n*2500+25000,1000000)*i)+' honey'],
                 desc:'Can be fed to a bee to transform it into a different type!'
             }],
             currentIndex:0,message:'Explore Royal Jelly Shop',currentIncrement:0,increments:[1,10,10e1,10e2,10e3,10e4]
@@ -24846,7 +24846,7 @@ function BeeSwarmSimulator(DATA){
                 name:'ticket',
                 slot:'item',
                 viewMatrix:[-11.75-4.5,35,88.25-4.5,MATH.HALF_PI+MATH.QUATER_PI,0.02],
-                cost:[(n,i=1)=>Math.min(Math.floor(5000*Math.pow(1.003,n)*i),0)+' honey'],
+                cost:[(n,i=1)=>Math.min(Math.floor(5000*Math.pow(1.003,n)*i),1000000000000)+' honey'],
                 desc:'Can be used to purchase special items and activate machines!'
             }],
             currentIndex:0,message:'Explore Ticket Shop',currentIncrement:0,increments:[1,10,10e1,50e1]
@@ -24900,56 +24900,56 @@ function BeeSwarmSimulator(DATA){
                 name:'goldEgg',
                 slot:'item',
                 viewMatrix:[28.25+2,4,-17.25,-MATH.HALF_PI,-0.2],
-                cost:['0 ticket'],
+                cost:['25 ticket'],
                 desc:'Can be used to hatch an epic, legendary, or mythic bee!<br><br>The bee has a small chance to be gifted!'
             },{
                 amountPurchased:0,maxPurchasedAmount:Infinity,
                 name:'starTreat',
                 slot:'item',
                 viewMatrix:[28.25+2,4,-19.25,-MATH.HALF_PI,-0.2],
-                cost:['0 ticket'],
+                cost:['250 ticket'],
                 desc:'Can be fed to any bee to make it gifted!<br><br>It\s best to use Star Treats on event bees as it\'s the only way to make them gifted.'
             },{
                 amountPurchased:0,maxPurchasedAmount:1,
                 name:'puppyBeeEgg',
                 slot:'item',
                 viewMatrix:[28.25+2,4,-21.25,-MATH.HALF_PI,-0.2],
-                cost:['0 ticket'],
+                cost:['150 ticket'],
                 desc:"This bee loves to play! It helps with bee bonding and will sometimes reward you treats by playing fetch!<br><br>(Honestly even with the buff in this version you still shouldn't buy it, it's rlly bad)"
             },{
                 amountPurchased:0,maxPurchasedAmount:1,
                 name:'photonBeeEgg',
                 slot:'item',
                 viewMatrix:[28.25+2,4,-23.25,-MATH.HALF_PI,-0.2],
-                cost:['0 ticket'],
+                cost:['150 ticket'],
                 desc:'An entity made of pure light! Fires beams from the sky to collect massive amounts of pollen at once.'
             },{
                 amountPurchased:0,maxPurchasedAmount:1,
                 name:'tabbyBeeEgg',
                 slot:'item',
                 viewMatrix:[33.75-2,4,-23.25,MATH.HALF_PI,-0.2],
-                cost:['0 ticket'],
+                cost:['150 ticket'],
                 desc:'An affectionate bee who becomes a harder worker as it warms up to you.'
             },{
                 amountPurchased:0,maxPurchasedAmount:1,
                 name:'festiveBeeEgg',
                 slot:'item',
                 viewMatrix:[33.75-2,4,-21.25,MATH.HALF_PI,-0.2],
-                cost:['0 ticket'],
+                cost:['150 ticket'],
                 desc:'A generous bee who spreads the joy of Beesmas by occasionally hands out random gifts to you!'
             },{
                 amountPurchased:0,maxPurchasedAmount:1,
                 name:'crimsonBeeEgg',
                 slot:'item',
                 viewMatrix:[33.75-2,4,-19.25,MATH.HALF_PI,-0.2],
-                cost:['0 ticket'],
+                cost:['75 ticket'],
                 desc:'Defender of all things red! Excels in hives with many red bees. Has enhanced abilities when working with Cobalt Bee.'
             },{
                 amountPurchased:0,maxPurchasedAmount:1,
                 name:'cobaltBeeEgg',
                 slot:'item',
                 viewMatrix:[33.75-2,4,-17.25,MATH.HALF_PI,-0.2],
-                cost:['0 ticket'],
+                cost:['75 ticket'],
                 desc:'Defender of all things blue! Excels in hives with many blue bees. Has enhanced abilities when working with Crimson Bee.'
             }],
             currentIndex:0,message:'Explore Ticket Tent'
