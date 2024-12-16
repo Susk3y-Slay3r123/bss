@@ -24100,21 +24100,21 @@ function BeeSwarmSimulator(DATA){
                 name:'blueDrive',
                 slot:'item',
                 viewMatrix:[58,11,39.8315,MATH.HALF_PI,-0.25],
-                cost:['10 cog'],
+                cost:['0 cog'],
                 desc:'A blue computer drive for use in the Robo Challenge.<br><br>Grants x1.25 blue pollen, x1.25 blue field capacity, and +1 blue bee attack'
             },{
                 amountPurchased:0,maxPurchasedAmount:Infinity,
                 name:'whiteDrive',
                 slot:'item',
                 viewMatrix:[58,11,41.663,MATH.HALF_PI,-0.25],
-                cost:['10 cog'],
+                cost:['0 cog'],
                 desc:'A white computer drive for use in the Robo Challenge.<br><br>Grants x1.25 white pollen, x1.25 white field capacity, and +1 white bee attack'
             },{
                 amountPurchased:0,maxPurchasedAmount:Infinity,
                 name:'glitchedDrive',
                 slot:'item',
                 viewMatrix:[58,11,43.5,MATH.HALF_PI,-0.25],
-                cost:['20 cog'],
+                cost:['0 cog'],
                 desc:'A glitched computer drive for use in the Robo Challenge.<br><br>Grants x1.25 pollen, x1.25 capacity, and +1 attack'
             },{
                 amountPurchased:0,maxPurchasedAmount:1,
