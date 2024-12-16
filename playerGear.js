@@ -530,18 +530,18 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.bluePollen*=1.25
-                stats.whitePollen*=1.25
-                stats.redPollen*=1.25
-                stats.pollenFromBees*=1.22
-                stats.defense+=0.25
-                stats.redBeeAbilityRate*=1.1
-                stats.blueBeeAbilityRate*=1.1
-                stats.whiteBeeAbilityRate*=1.1
+                stats.bluePollen*=2.25
+                stats.whitePollen*=2.25
+                stats.redPollen*=2.25
+                stats.pollenFromBees*=9
+                stats.defense+=99999999999999999999999
+                stats.redBeeAbilityRate*=1000
+                stats.blueBeeAbilityRate*=1000
+                stats.whiteBeeAbilityRate*=1000
 
             },
             desc:'A veiled hat only worn by real-deal beekeepers.<br><br>x1.25 pollen<br>x1.25 pollen from bees<br>x1.1 bee ability rate<br>+25% defense',
-            cost:['10000000 honey','3 enzymes','1 glue','1 glitter'],
+            cost:['10000000 honey','0 enzymes','1 glue','1 glitter'],
         },
 
         honeyMask:{
@@ -811,12 +811,12 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=100000
-                stats.lootLuck*=1.5
-                stats.convertRate*=1.5
+                stats.capacity+=10000000
+                stats.lootLuck*=9999999999999999
+                stats.convertRate*=2
             },
             desc:'A highly-embellished belt bag imported from a lost land, as big as a tambourine.<br><br>+100,000 capacity<br>x1.5 loot luck<br>x1.5 convert rate',
-            cost:['5000000 honey','50 pineapple','50 sunflowerSeed','3 stinger'],
+            cost:['5000000 honey','0 pineapple','0 sunflowerSeed','0 stinger'],
         },
         
         honeycombBelt:{
