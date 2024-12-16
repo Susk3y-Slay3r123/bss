@@ -24121,7 +24121,7 @@ function BeeSwarmSimulator(DATA){
                 name:'digitalBeeEgg',
                 slot:'item',
                 viewMatrix:[58,12.5,34,MATH.HALF_PI,-0.25],
-                cost:['24232021 honey','5 glitchedDrive','3 redDrive','3 whiteDrive','3 blueDrive'],
+                cost:['0 honey','0 glitchedDrive','0 redDrive','0 whiteDrive','0 blueDrive'],
                 desc:'A virtual bee with a malfunctioning AI. It corrupts fields to duplicate ability tokens and hacks the mind of enemies!'
             }],
             currentIndex:0,message:'Explore Robo Shop'
