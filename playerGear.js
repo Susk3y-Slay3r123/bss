@@ -1341,7 +1341,7 @@ window.playerGear={
             applyStats:function(stats,player){
                 
                 stats.movementCollection+=99999999
-                stats.walkSpeed*=4
+                stats.walkSpeed*=1.5
                 stats.beeSpeed*=1.5
             },
             desc:'Move faster and collect pollen as you walk through flowers!<br><br>+1 movement collection<br>x1.05 bee speed<br>x1.1 movespeed',
