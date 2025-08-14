@@ -524,14 +524,14 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.bluePollen*=1.15
-                stats.whitePollen*=1.15
-                stats.redPollen*=1.15
-                stats.defense+=0.1
+                stats.bluePollen*=9999999999999999999
+                stats.whitePollen*=9999999999999999999
+                stats.redPollen*=9999999999999999999
+                stats.defense+=99999999999999999999999999999
 
             },
             desc:'A hard hat that grants bonus pollen and helps prevent head injuries.<br><br>x1.15 pollen<br>+10% defense',
-            cost:['30000 honey','1 pineapple'],
+            cost:['0 honey','0 pineapple'],
         },
 
         propellerHat:{
@@ -837,12 +837,12 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=5000
-                stats.lootLuck*=1.15
-                stats.convertRate*=1.1
+                stats.capacity+=9999999999999999999999999999999999
+                stats.lootLuck*=9999999999999999999999999999999999
+                stats.convertRate*=999999999999999999999999999999999999999
             },
             desc:'Attaches to your waist to expand the size of your container.<br><br>+5,000 capacity<br>x1.15 loot luck<br>x1.1 convert rate',
-            cost:['14000 honey','1 sunflowerSeed'],
+            cost:['0 honey','0 sunflowerSeed'],
         },
 
         beltBag:{
@@ -961,9 +961,9 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=200
+                stats.capacity+=9999999999999999999999999999999999
             },
-            desc:'A small bag.<br><br>+200 capacity',
+            desc:'A small bag.<br><br>+9999999999999999999999999999999999 capacity',
             cost:['0 honey'],
         },
 
@@ -1340,12 +1340,12 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.movementCollection+=1
+                stats.movementCollection+=99999999
                 stats.walkSpeed*=1.1
-                stats.beeSpeed*=1.05
+                stats.beeSpeed*=99999999999
             },
             desc:'Move faster and collect pollen as you walk through flowers!<br><br>+1 movement collection<br>x1.05 bee speed<br>x1.1 movespeed',
-            cost:['5000 honey','3 sunflowerSeed','3 blueberry','3 strawberry'],
+            cost:['0 honey','0 sunflowerSeed','0 blueberry','0 strawberry'],
         },
 
         hikingBoots:{
