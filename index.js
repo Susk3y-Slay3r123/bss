@@ -21778,7 +21778,7 @@ function BeeSwarmSimulator(DATA){
                 }
             },
             desc:'A dipper drizzled with brittle liquid porcelain.<br><br>Collects 3 pollen from 49 flowers every 0.7s. Collects x1.5 more white pollen.<br><br>Every 10th swing summons a pillar of light that collects massive pollen.',
-            cost:['100000000 honey'],
+            cost:['0 honey'],
 
         },
         
@@ -27857,11 +27857,11 @@ function BeeSwarmSimulator(DATA){
                 displayPos:[-16.75,35.35+4.25,77.5-7.5],
                 displayScale:[1.25,1.25,1.25],
             },{
-                amountPurchased:0,maxPurchasedAmount:25,
+                amountPurchased:0,maxPurchasedAmount:Infinity,
                 name:'hiveSlot',
                 slot:'item',
                 viewMatrix:[-10,37,74,MATH.HALF_PI,0],
-                cost:[n=>Math.floor(Math.pow(1.375,n)*1000000)+' honey'],
+                cost:[n=>Math.floor(Math.pow(1.375,n)*0)+' honey'],
                 desc:'Increases the capacity of your hive, allowing you to hatch an additional bee!'
             }],
             currentIndex:0,message:'Explore Top Shop'
@@ -34760,3 +34760,4 @@ function BeeSwarmSimulator(DATA){
     
 
 }
+
