@@ -455,8 +455,8 @@ window.playerGear={
             },
             applyStats:function(stats,player){
                 
-                stats.gliderSpeed=18*0.7
-                stats.gliderFall=-5*0.75
+                stats.gliderSpeed=18*1
+                stats.gliderFall=-5*0.10
             },
             desc:'A parachute you can use to glide down the mountain and reach new places!<br><br>Press jump while in the air to open. ',
             cost:['500000 honey'],
@@ -479,11 +479,11 @@ window.playerGear={
             },
             applyStats:function(stats,player){
                 
-                stats.gliderSpeed=18
-                stats.gliderFall=-5
+                stats.gliderSpeed=20
+                stats.gliderFall=-2
             },
             desc:'Floats much faster than the Parachute, allowing you to fly through the sky!<br><br>Press jump while in the air to open. ',
-            cost:['5000000 honey'],
+            cost:['0 honey'],
         },
         
     },
@@ -600,18 +600,18 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.bluePollen*=1.25
-                stats.whitePollen*=1.25
-                stats.redPollen*=1.25
-                stats.pollenFromBees*=1.22
-                stats.defense+=0.25
-                stats.redBeeAbilityRate*=1.1
-                stats.blueBeeAbilityRate*=1.1
-                stats.whiteBeeAbilityRate*=1.1
+                stats.bluePollen*=9999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                stats.whitePollen*=9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                stats.redPollen*=99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                stats.pollenFromBees*=99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                stats.defense+=9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                stats.redBeeAbilityRate*=9999999999999999999999999999999999999999999999999999999999999
+                stats.blueBeeAbilityRate*=999999999999999999999999999999999999999999999999999999999999999999999
+                stats.whiteBeeAbilityRate*=9999999999999999999999999999999999999999999999999999999999999999999999999999999999
 
             },
             desc:'A veiled hat only worn by real-deal beekeepers.<br><br>x1.25 pollen<br>x1.25 pollen from bees<br>x1.1 bee ability rate<br>+25% defense',
-            cost:['10000000 honey','3 enzymes','1 glue','1 glitter'],
+            cost:['0 honey','0 enzymes','0 glue','0 glitter'],
         },
 
         honeyMask:{
@@ -881,12 +881,12 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=100000
-                stats.lootLuck*=1.5
-                stats.convertRate*=1.5
+                stats.capacity+=999999999999999999999999999999999999999999999999999999999999999999999999
+                stats.lootLuck*=99999999999999999999999999999999999999999999999999999999999999999999999999999999
+                stats.convertRate*=9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
             },
             desc:'A highly-embellished belt bag imported from a lost land, as big as a tambourine.<br><br>+100,000 capacity<br>x1.5 loot luck<br>x1.5 convert rate',
-            cost:['5000000 honey','50 pineapple','50 sunflowerSeed','3 stinger'],
+            cost:['0 honey','0 pineapple','0 sunflowerSeed','0 stinger'],
         },
         
         honeycombBelt:{
@@ -1171,20 +1171,20 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=1000000
-                stats.convertRate*=3
+                stats.capacity+=999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                stats.convertRate*=9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
                 stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,0.1)
                 stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,0.1)
                 stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.1)
-                stats.whitePollen*=1.5
-                stats.bluePollen*=1.1
-                stats.redPollen*=1.1
-                stats.redBeeAttack+=1
-                stats.blueBeeAttack+=1
-                stats.whiteBeeAttack+=1
+                stats.whitePollen*=9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                stats.bluePollen*=9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                stats.redPollen*=9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                stats.redBeeAttack+=9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                stats.blueBeeAttack+=9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                stats.whiteBeeAttack+=9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
             },
             desc:'A rare and precious Port-O-Hive that boosts white pollen.<br><br>+1,000,000 capacity<br>x3 convert rate<br>+10% instant conversion<br>x1.5 white pollen<br>x1.1 red pollen<br>x1.1 blue pollen<br>+1 bee attack',
-            cost:['150000000 honey'],
+            cost:['0 honey'],
         },
         
         coconutCanister:{
@@ -1318,14 +1318,14 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.movementCollection+=10
-                stats.walkSpeed*=1.15
-                stats.jumpPower*=1.375
-                stats.pollenFromBees*=1.25
+                stats.movementCollection+=9999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                stats.walkSpeed*=1.5
+                stats.jumpPower*=1.5
+                stats.pollenFromBees*=9999999999999999999999999999999999999999999999999999999999999999999999999999999
                 stats.beeSpeed*=1.2
             },
             desc:'Practical and stylish boots that aid in the beekeeping process.<br><br>+10 movement collection<br>x1.25 pollen from bees<br>x1.2 bee speed<br>x1.15 movespeed<br>x1.375 jump power',
-            cost:['7500000 honey','5 oil','3 redExtract','3 blueExtract'],
+            cost:['0 honey','0 oil','0 redExtract','0 blueExtract'],
         },
 
         basicBoots:{
