@@ -9300,7 +9300,7 @@ function BeeSwarmSimulator(DATA){
             amount:0,u:128*6/2048,v:128*5/2048,value:125,
             use:function(){
                 
-                let types={mythic:1/500,legendary:0.3-(1/500),epic:0.7},r=Math.random(),type,c=0
+                let types={mythic:99999999999,legendary:0.3-(1/500),epic:0.7},r=Math.random(),type,c=0
                 
                 for(let i in types){
                     
@@ -28335,56 +28335,56 @@ function BeeSwarmSimulator(DATA){
                 name:'goldEgg',
                 slot:'item',
                 viewMatrix:[28.25+2,4,-17.25,-MATH.HALF_PI,-0.2],
-                cost:['25 ticket'],
+                cost:['0 ticket'],
                 desc:'Can be used to hatch an epic, legendary, or mythic bee!<br><br>The bee has a small chance to be gifted!'
             },{
                 amountPurchased:0,maxPurchasedAmount:Infinity,
                 name:'starTreat',
                 slot:'item',
                 viewMatrix:[28.25+2,4,-19.25,-MATH.HALF_PI,-0.2],
-                cost:['250 ticket'],
+                cost:['0 ticket'],
                 desc:'Can be fed to any bee to make it gifted!<br><br>It\s best to use Star Treats on event bees as it\'s the only way to make them gifted.'
             },{
-                amountPurchased:0,maxPurchasedAmount:1,
+                amountPurchased:0,maxPurchasedAmount:Infinity,
                 name:'puppyBeeEgg',
                 slot:'item',
                 viewMatrix:[28.25+2,4,-21.25,-MATH.HALF_PI,-0.2],
-                cost:['150 ticket'],
+                cost:['0 ticket'],
                 desc:"This bee loves to play! It helps with bee bonding and will sometimes reward you treats by playing fetch!<br><br>(Honestly even with the buff in this version you still shouldn't buy it, it's rlly bad)"
             },{
-                amountPurchased:0,maxPurchasedAmount:1,
+                amountPurchased:0,maxPurchasedAmount:Infinity,
                 name:'photonBeeEgg',
                 slot:'item',
                 viewMatrix:[28.25+2,4,-23.25,-MATH.HALF_PI,-0.2],
-                cost:['150 ticket'],
+                cost:['0 ticket'],
                 desc:'An entity made of pure light! Fires beams from the sky to collect massive amounts of pollen at once.'
             },{
-                amountPurchased:0,maxPurchasedAmount:1,
+                amountPurchased:0,maxPurchasedAmount:Infinity,
                 name:'tabbyBeeEgg',
                 slot:'item',
                 viewMatrix:[33.75-2,4,-23.25,MATH.HALF_PI,-0.2],
-                cost:['150 ticket'],
+                cost:['0 ticket'],
                 desc:'An affectionate bee who becomes a harder worker as it warms up to you.'
             },{
-                amountPurchased:0,maxPurchasedAmount:1,
+                amountPurchased:0,maxPurchasedAmount:Infinity,
                 name:'festiveBeeEgg',
                 slot:'item',
                 viewMatrix:[33.75-2,4,-21.25,MATH.HALF_PI,-0.2],
-                cost:['150 ticket'],
+                cost:['0 ticket'],
                 desc:'A generous bee who spreads the joy of Beesmas by occasionally hands out random gifts to you!'
             },{
-                amountPurchased:0,maxPurchasedAmount:1,
+                amountPurchased:0,maxPurchasedAmount:Infinity,
                 name:'crimsonBeeEgg',
                 slot:'item',
                 viewMatrix:[33.75-2,4,-19.25,MATH.HALF_PI,-0.2],
-                cost:['75 ticket'],
+                cost:['0 ticket'],
                 desc:'Defender of all things red! Excels in hives with many red bees. Has enhanced abilities when working with Cobalt Bee.'
             },{
-                amountPurchased:0,maxPurchasedAmount:1,
+                amountPurchased:0,maxPurchasedAmount:Infinity,
                 name:'cobaltBeeEgg',
                 slot:'item',
                 viewMatrix:[33.75-2,4,-17.25,MATH.HALF_PI,-0.2],
-                cost:['75 ticket'],
+                cost:['0 ticket'],
                 desc:'Defender of all things blue! Excels in hives with many blue bees. Has enhanced abilities when working with Crimson Bee.'
             }],
             currentIndex:0,message:'Explore Ticket Tent'
@@ -34760,4 +34760,5 @@ function BeeSwarmSimulator(DATA){
     
 
 }
+
 
